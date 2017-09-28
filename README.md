@@ -49,6 +49,8 @@ The amount of security that needs to be applied is up to the discretion of the a
 
 and then create an `.htaccess` file in the installation folder:
 
+	AuthType Basic
+	AuthName "rpi-timeset access"
 	AuthUserFile .htpasswd
 	Require valid-user
 
