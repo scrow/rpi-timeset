@@ -17,12 +17,28 @@ The only dependencies are a web server and PHP, which can be obtained with:
 
 ## Installation
 
-To run this script, simply copy it to a folder accessible from your web browser.  Creation of a unique folder for this utility is recommended.  For Raspbian Stretch:
+To install this script, simply copy it to a folder accessible from your web browser.  Creation of a unique folder for this utility is recommended.  For Raspbian Stretch:
 
 	sudo mkdir /var/www/html/rpi-timeset
 	sudo chown www-data:www-data /var/www/html/rpi-timeset
 
 Place the `index.php` file in the desired folder.  If necessary, this file can be renamed and the script should still function normally.
+
+Then, grant your web server `sudo` permissions for `/bin/date`.  On Raspbian Stretch, use `sudo visudo` to add a line like this:
+
+	www-data  ALL=NOPASSWD:  /bin/date *
+
+Change `www-data` to your web server process owner name.
+
+## Usage
+
+To run this script simply access the file on the web browser.  The URL will vary depending on the path chosen during installation and the method used to connect (direct vs. SSH tunnel).  Using the paths in this documentation, the URL might be:
+
+	http://raspberrypi.local/rpi-timeset/
+	http://192.168.1.100/rpi-timeset/
+	http://127.0.0.1:8000/rpi-timeset/
+
+The script will display the before-and-after time stamps and a success/fail message.
 
 ## Securing the Installation
 
@@ -49,6 +65,10 @@ You may also wish to configure the web server to connect only via the loopback i
     </IfModule>
 
 From the client end, you would `ssh username@domain.com -L 8000:127.0.0.1:80` and use your web browser to connect to `http://127.0.0.1:8000`.
+
+## Extending Functionality
+
+If additional commands should be run after updating the time, place those commands in a script called `postrun.sh` in the same folder and do a `chmod +x postrun.sh` to make it executable.
 
 ## Feedback
 
