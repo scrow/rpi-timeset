@@ -72,4 +72,10 @@ If additional commands should be run after updating the time, place those comman
 
 ## Feedback
 
-Comments, questions, and bug reports can be directed to the [GitHub project page](http://github.com/scrow/rpi-timeset).  The author may be contacted directly via [email](mailto:steve@stevecrow.net).
+Comments, questions, and bug reports can be directed to the [GitHub project page](http://github.com/scrow/rpi-timeset).  The author may be contacted directly at <mailto:steve@stevecrow.net>.
+
+## License
+
+Copyright (c) 2017 Steve Crow.  Licensed under the BSD 2-clause “Simplified” License.
+
+For license information, see the `LICENSE.md` file or visit <http://github.com/scrow/rpi-timeset>.
