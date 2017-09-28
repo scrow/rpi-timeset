@@ -4,7 +4,7 @@
 
 The `rpi-timeset` utility is a simple PHP script which allows quick update of a remote system clock via the web browser.  The system time is synchronized to the remote client system time obtained using Javascript.  Originally intended for use on the Raspberry Pi, this script could be easily adapted to other hardware platforms as desired.
 
-The mostly likely use case would be an RPi which has been configured to failover to a peer-to-peer or ad hoc network connection if wireless LAN association fails at boot.  In this instance an Internet connection would be unavailable so the RPi could not sync via `ntp`.  However, a user could utilize this utility to adjust the system clock to match that of a tablet, smartphone, laptop, or other device on the ad hoc network which may have a better idea of the current time.
+The mostly likely use case would be an RPi which has been [configured to failover to a hotspot/ad hoc network connection][1] if wireless LAN association fails at boot.  In this instance an Internet connection would be unavailable so the RPi could not sync via `ntp`.  However, a user could utilize this utility to adjust the system clock to match that of a tablet, smartphone, laptop, or other device on the ad hoc network which may have a better idea of the current time.
 
 ## Requirements
 
@@ -79,3 +79,6 @@ Comments, questions, and bug reports can be directed to the [GitHub project page
 Copyright (c) 2017 Steve Crow.  Licensed under the BSD 2-clause “Simplified” License.
 
 For license information, see the `LICENSE.md` file or visit <http://github.com/scrow/rpi-timeset>.
+
+[1]: http://www.raspberryconnect.com/network/item/315-rpi3-auto-wifi-hotspot-if-no-internet
+
