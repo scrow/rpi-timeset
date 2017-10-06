@@ -36,7 +36,8 @@ if (isset($_GET['time_stamp']) && (trim($_GET['time_stamp'])!=="")) {
 			echo('<P><A HREF="'.basename(__FILE__).'">Run again</A></P>');
 
 			if(file_exists('postrun.sh')) {
-				shell_exec('postrun.sh');
+				$full_file_path=realpath('postrun.sh');
+				shell_exec($full_file_path);
 			};
 			?>
 		</BODY>
