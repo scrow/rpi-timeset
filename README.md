@@ -51,7 +51,7 @@ and then create an `.htaccess` file in the installation folder:
 
 	AuthType Basic
 	AuthName "rpi-timeset access"
-	AuthUserFile .htpasswd
+	AuthUserFile /var/www/html/rpi-timeset/.htpasswd
 	Require valid-user
 
 You may also wish to configure the web server to connect only via the loopback interface, which will require client connections over an SSH tunnel.  To configure Apache for this, modify `/etc/apache2/ports.conf`:
